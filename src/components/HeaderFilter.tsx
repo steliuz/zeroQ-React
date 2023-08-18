@@ -1,16 +1,14 @@
 import { SearchOutlined } from '@ant-design/icons'
 import { Input } from 'antd'
-import { SearchProps } from '../interfaces/OfficeInterfaces'
+import { useDispatch } from 'react-redux'
+import { setFilters } from '../store'
 
-import { useState } from 'react'
-
-export const HeaderFilter = ({ onSearch }: SearchProps) => {
-	const [searchText, setSearchText] = useState('')
+export const HeaderFilter = () => {
+	const dispatch = useDispatch()
 
 	const handleSearchChange = (e: any) => {
 		const value = e.target.value
-		setSearchText(value)
-		onSearch(value)
+		dispatch(setFilters(value))
 	}
 
 	const styleHeader = {
@@ -19,7 +17,7 @@ export const HeaderFilter = ({ onSearch }: SearchProps) => {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		padding: '0px 10%'
+		padding: ' 0px clamp(10px, 200px, 5%)'
 	}
 	const flexCenter = {
 		width: '1200px',
@@ -40,7 +38,6 @@ export const HeaderFilter = ({ onSearch }: SearchProps) => {
 						<Input
 							placeholder="Buscar Sucursal"
 							prefix={<SearchOutlined />}
-							value={searchText}
 							onChange={handleSearchChange}
 						/>
 					</div>

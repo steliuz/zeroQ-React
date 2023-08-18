@@ -1,4 +1,3 @@
-
 import { OfficeItem } from '../interfaces/OfficeInterfaces'
 
 export const getCountWaitings = (office: OfficeItem) => {

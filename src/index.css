@@ -58,7 +58,7 @@ button:focus-visible {
 }
 
 :where(.css-dev-only-do-not-override-byeoj0).ant-input-affix-wrapper {
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 }
 
 @media (prefers-color-scheme: light) {
@@ -85,7 +85,7 @@ button:focus-visible {
 
 @media (max-width: 1200px) {
 	.container {
-		/* justify-content: center; */
+		justify-content: center;
 		max-width: 1300px;
 	}
 }

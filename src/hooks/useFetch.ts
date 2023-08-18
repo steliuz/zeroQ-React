@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { officesApi } from "../services";
 
-export const useFetch = (url: string) => {
+
+export const useFetch = () => {
 
   const [state, setState] = useState({
     data: null,
@@ -13,7 +14,7 @@ export const useFetch = (url: string) => {
     });
 
     try {
-      const { data } = await officesApi.get(url);
+      const { data } = await officesApi.get('/offices');
 
       setState({
         data,

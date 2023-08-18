@@ -16,7 +16,7 @@ export const officesSlice = createSlice({
       state.items = payload;
     },
     setFilters: (state, { payload }) => {
-      state.filters = { ...state.filters, ...payload }
+      state.filters.name = payload;
     },
     toggleOnline: (state, { payload }) => {
       state.items = state.items.map((office: OfficeItem) => {
