@@ -14,9 +14,19 @@ export interface OfficeItem {
   online: boolean;
   lines: Line[];
 }
+export interface filter {
+  name: string
+}
+export interface SearchProps {
+  onSearch: (searchValue: string) => void;
+}
+export interface search {
+  searchValue: string
+}
 
 export type OfficeData = OfficeItem[];
 
 export interface OfficeState {
   items: OfficeData;
+  filters: filter
 }

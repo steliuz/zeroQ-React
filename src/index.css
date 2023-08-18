@@ -57,6 +57,10 @@ button:focus-visible {
 	border-radius: 0;
 }
 
+:where(.css-dev-only-do-not-override-byeoj0).ant-input-affix-wrapper {
+	border-radius: 0 !important;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;
@@ -67,6 +71,22 @@ button:focus-visible {
 	}
 	button {
 		background-color: #f9f9f9;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 16px;
+	width: 100%;
+	max-width: 1110px;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		/* justify-content: center; */
+		max-width: 1300px;
 	}
 }
 

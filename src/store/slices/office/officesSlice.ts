@@ -3,6 +3,9 @@ import { OfficeState, OfficeItem } from '../../../interfaces/OfficeInterfaces';
 
 const initialState: OfficeState = {
   items: [],
+  filters: {
+    name: ''
+  }
 }
 
 export const officesSlice = createSlice({
@@ -11,6 +14,9 @@ export const officesSlice = createSlice({
   reducers: {
     setOffices: (state, { payload }) => {
       state.items = payload;
+    },
+    setFilters: (state, { payload }) => {
+      state.filters = { ...state.filters, ...payload }
     },
     toggleOnline: (state, { payload }) => {
       state.items = state.items.map((office: OfficeItem) => {
@@ -26,4 +32,4 @@ export const officesSlice = createSlice({
   }
 })
 
-export const { setOffices, toggleOnline } = officesSlice.actions
+export const { setOffices, toggleOnline, setFilters } = officesSlice.actions
