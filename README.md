@@ -13,21 +13,11 @@ Este proyecto es parte de un desafío que consiste en consumir una API Restful p
 
 ## Cómo Usar
 
-1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
+1. Clona este repositorio en tu máquina local.
+2. Instala las dependencias utilizando el comando `npm install` o `yarn`.
+3. Inicia la aplicación con `npm start` o `yarn dev`.
 
-2. Instala las dependencias necesarias utilizando npm o yarn:
-
-
-o
-
-
-3. Ejecuta la aplicación en modo de desarrollo:
-
-
-o
-
-
-Esto abrirá la aplicación en tu navegador web en la dirección [http://localhost:5173](http://localhost:5173/).
+La app estará corriendo en el servidor [http://localhost:5173](http://localhost:5173/).
 
 ## Dependencias
 
